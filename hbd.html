@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><title>hbd nazwa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffebee;
+            color: #333;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            padding: 30px 0;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e, #ffb3b3);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            opacity: 0.7;
+            animation: fall 5s linear infinite;
+        }
+
+        .birthday-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .birthday-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cake-container {
+    position: relative;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+        }
+
+
+        .cake-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .candle {
+            position: absolute;
+            width: 8px;
+            height: 60px;
+            background: linear-gradient(to bottom, #960881, #069e92);
+            border-radius: 5px;
+            z-index: 2;
+        }
+
+        .flame {
+            position: absolute;
+            width: 15px;
+            height: 20px;
+            background: #ff9500;
+            border-radius: 50% 50% 20% 20%;
+            box-shadow: 0 0 20px #ffff00, 0 0 40px #ff9500;
+            animation: flicker 1.5s ease-in-out infinite alternate;
+            z-index: 3;
+        }
+
+        .message {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .wish-button {
+            background: linear-gradient(45deg, #d479ad, #991313);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            z-index: 1;
+            position: relative;
+        }
+
+        .wish-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .photo-collage {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .photo-item {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            border-radius: 10px;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        @keyframes flicker {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .photo-item {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .cake-container {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 Selamat Ulang Tahun! 🎂</h1>
+            <!-- Confetti elements will be added by JavaScript -->
+        </div>
+
+        <div class="birthday-card">
+            <h2>💖 Untuk Nazwa Yang Spesial 💖</h2>
+            <div class="message">
+                <p>🎈 Di hari yang istimewa ini, aku ingin mengucapkan selamat ulang tahun yang penuh kebahagiaan untukmu! 🎁</p>
+                <p>Semoga tahun ini membawa lebih banyak kegembiraan, kesuksesan, dan kebahagiaan dibanding tahun-tahun sebelumnya. Teruslah menjadi orang yang luar biasa seperti sekarang dan jangan pernah berubah!</p>
+                <p>Semoga semua impian dan harapanmu terwujud di tahun ini.
+                <p>Semoga semua hal baik selalu datang ke hidupmu — termasuk yang diam-diam selalu perhatian ke kamu 😌
+                Terima kasih sudah jadi alasan senyumku akhir-akhir ini. 🌷
+
+</p>
+                </p>
+            </div>
+        </div>
+
+        <div class="cake-container">
+            <img src="https://raw.githubusercontent.com/Ridwan07nz/nzw/main/pp.jpg"
+            
+             alt="Kue ulang tahun 3 tingkat berwarna pink dengan hiasan bunga dan lilin, di atas meja kayu dengan latar belakang balon" class="cake-image">
+            <div class="candle" style="left: 50%; top: -40px;"></div>
+            <div class="flame" style="left: 50%; top: -60px; margin-left: -7.5px;"></div>
+        </div>
+
+        <button class="wish-button" id="wishBtn">✨ Tekan untuk Ucapan Spesial ✨</button>
+
+        <div class="birthday-card" id="specialWish" style="display: none;">
+            <h2>💌 Ucapan Spesial Untukmu 💌</h2>
+            <div class="message">
+                <p>Selamat ulang tahun, kamu yang nggak pernah aku sebut "pacar",
+                tapi selalu aku doain kayak yang punya hubungan sah. 🥲
+                Semoga makin bahagia, meski status kita masih… “belum tahu arahnya ke mana” 😅
+                Tapi tenang, aku tetap orang pertama yang ingat ulang tahun kamu (padahal bukan siapa-siapa). 😝🎂</p>
+                <p>Selamat ulang tahun, Nazwa...
+Kamu yang bukan pacar, tapi paling sering aku pikirin.
+Kamu yang gak pernah aku milikin, tapi selalu aku jagain (dari jauh 😅).
+
+Di hari ulang tahunmu ini, aku cuma mau bilang:
+Semoga kamu bahagia, sehat, dan selalu dikelilingi orang yang sayang...
+Termasuk aku, yang sayangnya diem-diem tapi gak pernah setengah-setengah 🫣
+
+Oh iya, semoga tahun ini… kamu tetap cantik 😜
+Kalau bisa sih, respon perasaanku juga jangan ditunda-tunda lagi 😏
+
+HBD Nazwa, dari seseorang yang gak pernah kamu panggil sayang...
+Tapi doanya selalu ngarah ke nama kamu. 💐💬</p>
+                <p>Tahun ini adalah tahunmu untuk bersinar! Jangan pernah ragu akan kemampuan dan kehebatannmu, karena kamu adalah orang yang luar biasa dengan bakat dan kebaikan yang melimpah.</p>
+                <p>Ingatlah selalu bahwa ada banyak orang yang mencintaimu dan mendukungmu di setiap langkah hidupmu. Teruslah bermimpi besar dan raihlah semua yang kamu inginkan!</p>
+                <hr>
+                <p>Jaga kesehatan dan tetap menjadi versi terbaik dari dirimu sendiri!</p>
+                
+            </div>
+        </div>
+
+        <h3>📸 Kenangan Terindah 💞</h3>
+        <div class="photo-collage">
+            <div class="photo-item">
+                <img src="https://raw.githubusercontent.com/Ridwan07nz/nzw/main/1.jpg" alt="Dua orang tersenyum bersama di pantai saat matahari terbenam dengan langit oranye">
+            </div>
+            <div class="photo-item">
+                <img src="https://raw.githubusercontent.com/Ridwan07nz/nzw/main/2.jpg" alt="Perayaan ulang tahun sebelumnya dengan balon dan kue di meja kayu">
+            </div>
+            <div class="photo-item">
+                <img src="https://raw.githubusercontent.com/Ridwan07nz/nzw/main/9.jpg" alt="Bersama di kafe urban dengan senyum bahagia dan cangkir kopi di tangan">
+            </div>
+            <div class="photo-item">
+                <img src="https://raw.githubusercontent.com/Ridwan07nz/nzw/main/4.jpg" alt="Momen spontan bersama di taman dengan dedaunan musim gugur">
+            </div>
+            <div class="photo-item">
+                <img src="https://raw.githubusercontent.com/Ridwan07nz/nzw/main/5.jpg" alt="Momen spontan bersama di taman dengan dedaunan musim gugur">
+            </div>
+            <div class="photo-item">
+                <img src="https://raw.githubusercontent.com/Ridwan07nz/nzw/main/6.jpg" alt="Momen spontan bersama di taman dengan dedaunan musim gugur">
+            </div>
+            <div class="photo-item">
+                <img src="https://raw.githubusercontent.com/Ridwan07nz/nzw/main/7.jpg" alt="Momen spontan bersama di taman dengan dedaunan musim gugur">
+            </div>
+            <div class="photo-item">
+                <img src="https://raw.githubusercontent.com/Ridwan07nz/nzw/main/8.jpg" alt="Momen spontan bersama di taman dengan dedaunan musim gugur">
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>💝power by@Wann07 | Selamat ulang tahun! NAZWA 🥳</p>
+        </div>
+    </div>
+
+    <script>
+        // Create confetti effect
+        function createConfetti() {
+            const header = document.querySelector('.header');
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = confetti.style.width;
+                confetti.style.animationDuration = Math.random() * 3 + 3 + 's';
+                confetti.style.animationDelay = Math.random() * 2 + 's';
+                confetti.style.backgroundColor = getRandomColor();
+                header.appendChild(confetti);
+            }
+        }
+
+        function getRandomColor() {
+            const colors = ['#ff6b6b', '#ff8e8e', '#ffb3b3', '#ffe66d', '#6bff8e', '#8ec0ff'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // Toggle special wish
+        document.getElementById('wishBtn').addEventListener('click', function() {
+            const specialWish = document.getElementById('specialWish');
+            if (specialWish.style.display === 'none') {
+                specialWish.style.display = 'block';
+                this.textContent = 'Sembunyikan Ucapan';
+                createConfetti();
+            } else {
+                specialWish.style.display = 'none';
+                this.textContent = 'Tekan untuk Ucapan Spesial';
+            }
+        });
+
+        // Create candles with flames
+        function createCandles() {
+            const cake = document.querySelector('.cake-container');
+            for (let i = 0; i < 5; i++) {
+                const leftPos = 100 + (i * 40);
+                const candle = document.createElement('div');
+                candle.classList.add('candle');
+                candle.style.left = leftPos + 'px';
+                candle.style.top = '-40px';
+                
+                const flame = document.createElement('div');
+                flame.classList.add('flame');
+                flame.style.left = (leftPos + 6) + 'px';
+                flame.style.top = '-60px';
+                flame.style.animationDelay = (i * 0.2) + 's';
+                
+                cake.appendChild(candle);
+                cake.appendChild(flame);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createCandles();
+            setInterval(() => {
+                const flames = document.querySelectorAll('.flame');
+                flames.forEach(flame => {
+                    flame.style.animationDuration = (Math.random() * 0.5 + 1) + 's';
+                });
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
+
